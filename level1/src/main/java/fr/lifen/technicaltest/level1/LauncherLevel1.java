@@ -10,7 +10,7 @@ import fr.lifen.technicaltest.level1.services.SalaryService;
 import java.io.File;
 import java.io.IOException;
 
-public class Main {
+public class LauncherLevel1 {
     public static void main(String[] args) throws IOException {
         final ObjectMapper mapper = new ObjectMapper();
         final Data data = mapper.readValue(new File( "level1/src/main/resources/data.json"), Data.class);
