@@ -2,8 +2,6 @@ package fr.lifen.technicaltest.level4.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.text.DecimalFormat;
-
 public class Commission {
     @JsonProperty("pdg_fee")
     private Double pdgFee = 0d;

@@ -23,7 +23,6 @@ public class SalaryService {
                 .peek(shift -> commission.addFee(80))
                 .count();
 
-
         final List<Worker> workersOutput = data.getWorkers().stream().peek(worker -> {
             final List<Shift> shiftsForCurrentWorker = data.getShifts()
                     .stream()
@@ -42,7 +41,7 @@ public class SalaryService {
                     .mapToInt(shift -> shift.getWorker().getStatus().getPriceInWeekEnd());
 
             int price = IntStream.concat(priceForWeekEndStream, priceForWeekStream)
-                    .peek(shiftPrice -> commission.addFee(shiftPrice*0.05)) // changeme : not taking part of interim
+                    .peek(shiftPrice -> commission.addFee(shiftPrice*0.05))
                     .sum();
 
             worker.setPrice(price);
